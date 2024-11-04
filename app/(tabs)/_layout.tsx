@@ -4,6 +4,7 @@ import React from 'react';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { AntDesign , Ionicons } from '@expo/vector-icons';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -13,22 +14,47 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
+        tabBarStyle: {
+          backgroundColor: "white",
+          borderTopColor: "white"
+        },
+      
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: 'Featured',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <AntDesign name={focused === true ? "star" : "staro"} color="#FFCD38" size={22} />
           ),
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
-          title: 'Explore',
+          title: 'My Learning',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <AntDesign name={focused === true ? "play" : "playcircleo"} color="#FFCD38" size={22} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="whishlist"
+        options={{
+          title: 'Whishlist',
+          tabBarIcon: ({ color, focused }) => (
+            <AntDesign  name={focused === true ? "heart" : "hearto"} color="#FFCD38" size={22} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="cart"
+        options={{
+          title: 'Cart',
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons name={focused === true ? "bag" : "bag-outline"} color="#FFCD38" size={24} />
           ),
         }}
       />
