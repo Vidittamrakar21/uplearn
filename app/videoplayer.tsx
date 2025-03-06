@@ -107,7 +107,8 @@ export default function Videoplayer () {
 
         </View>
         
-      
+        <TouchableOpacity style={styles.btn2}><Text>Buy Now</Text></TouchableOpacity>
+
 
       </ScrollView>
     </SafeAreaView>
@@ -278,6 +279,19 @@ btna: {
     marginTop: 20,
     flexDirection: 'row',
     justifyContent: 'center',
+  },
+
+  btn2: {
+    height: 40,
+    width: "95%",
+    backgroundColor: "#FFCD38",
+    borderRadius: 8,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "absolute",
+    bottom: 7
+  
   },
   
 

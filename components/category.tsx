@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     },
     cont: {
         marginTop: 20,
-        height: 260
+        height: 280
     },
     main:{
         marginTop: 15,

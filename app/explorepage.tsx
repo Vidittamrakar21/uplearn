@@ -3,7 +3,7 @@ import React , {useState , useRef} from 'react'
 import { AntDesign , Ionicons } from '@expo/vector-icons';
 import { Video, ResizeMode } from 'expo-av';
 import { useRouter } from 'expo-router';
-
+import Baught from '@/components/baught';
 export default function Explorepage() {
 
   const video = useRef(null);
@@ -44,6 +44,7 @@ export default function Explorepage() {
         </View>
 
         <View style={styles.sec}>
+          <Text style={styles.txt1}>Sections</Text>
 
          <TouchableOpacity onPress={navigate_vedio}>
          <View style={styles.seg}>
@@ -108,6 +109,8 @@ export default function Explorepage() {
 
 
         </View>
+
+        <Baught/>
         
       
 
@@ -282,6 +285,13 @@ btna: {
     justifyContent: 'center',
   },
   
+  txt1: {
+    fontSize: 19,
+    fontWeight: "500",
+    marginLeft: 30,
+    textAlign: "left",
+    width: "100%"
+},
 
  
  

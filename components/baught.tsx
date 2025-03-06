@@ -4,7 +4,7 @@ import React from 'react';
 import { useRouter } from 'expo-router';
 
 
-export default function Courses() {
+export default function Baught() {
 
   const router = useRouter();
 
@@ -14,7 +14,7 @@ export default function Courses() {
 
   return (
     <View style={styles.cont} >
-      <Text style={styles.txt}>Recommended For You</Text>
+      <Text style={styles.txt}>Students also baught</Text>
       <ScrollView horizontal  style={styles.box}>
 
 
@@ -76,7 +76,6 @@ export default function Courses() {
             
             <Text style={styles.bld2}>See All</Text>
             </View>
-
 
 
 
@@ -148,6 +147,7 @@ const styles = StyleSheet.create({
       elevation: 6,
       marginLeft: 10
     },
+
     card2: {
       height: 285,
       width: 170,
@@ -178,6 +178,7 @@ const styles = StyleSheet.create({
       fontSize: 17,
       color: "purple"
     },
+
 
     nrm:{
       fontWeight:"400",

@@ -33,6 +33,7 @@ export default function RootLayout() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="explorepage" options={{ headerShown: true , title: "" , headerStyle:{backgroundColor: "white"}}} />
         <Stack.Screen name="videoplayer" options={{ headerShown: true , title: "" , headerStyle:{backgroundColor: "white"}}} />
+        <Stack.Screen name="searchpage" options={{ headerShown: true , title: "" , headerStyle:{backgroundColor: "white"}}} />
         <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>

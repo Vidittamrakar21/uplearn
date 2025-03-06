@@ -64,7 +64,10 @@ export default function Newcourses() {
             </View>
 
 
-
+            <View style={styles.card2}>
+            
+            <Text style={styles.bld2}>See All</Text>
+            </View>
 
 
       </ScrollView>
@@ -131,6 +134,17 @@ const styles = StyleSheet.create({
       marginLeft: 10
     },
 
+    card2: {
+      height: 285,
+      width: 170,
+     
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+     
+      marginLeft: 10
+    },
+
     btn: {
       height: 30,
       width: 200,
@@ -144,6 +158,12 @@ const styles = StyleSheet.create({
     bld:{
       fontWeight:"500",
       fontSize: 17
+    },
+
+    bld2:{
+      fontWeight:"500",
+      fontSize: 17,
+      color: "purple"
     },
 
     nrm:{
