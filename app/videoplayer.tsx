@@ -237,7 +237,7 @@ btna: {
   },
 
   seg: {
-    width: "95%",
+    width: "93%",
     height: 50,
     display: "flex",
     alignItems: "center",

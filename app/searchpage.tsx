@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         display: "flex",
         justifyContent: "flex-start",
         alignItems: "center",
-        // height: "100%"
+        height: "100%"
         
       },
     

@@ -4,6 +4,7 @@ import { AntDesign , Ionicons } from '@expo/vector-icons';
 import { Video, ResizeMode } from 'expo-av';
 import { useRouter } from 'expo-router';
 import Baught from '@/components/baught';
+import Review from '@/components/review';
 export default function Explorepage() {
 
   const video = useRef(null);
@@ -111,6 +112,8 @@ export default function Explorepage() {
         </View>
 
         <Baught/>
+
+        <Review/>
         
       
 
@@ -124,8 +127,8 @@ const styles = StyleSheet.create({
   main: {
     backgroundColor: "#F5F7F8",
     display: "flex",
-    justifyContent: "flex-start",
-    alignItems: "center",
+    // justifyContent: "flex-start",
+    // alignItems: "center",
     // height: "100%"
     
   },
@@ -241,7 +244,7 @@ btna: {
   },
 
   seg: {
-    width: "95%",
+    width: "93%",
     height: 50,
     display: "flex",
     alignItems: "center",
