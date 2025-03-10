@@ -5,6 +5,7 @@ import { Video, ResizeMode } from 'expo-av';
 import { useRouter } from 'expo-router';
 import Category from '@/components/category';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Courselist from '@/components/courselist';
 
 
 export default function Searchpage() {
@@ -31,9 +32,9 @@ export default function Searchpage() {
       <TextInput style={styles.inp} placeholder='Search for courses'></TextInput>
     </View>
 
-       <Category></Category>
+       {/* <Category></Category> */}
         
-      
+      <Courselist/>
 
       </ScrollView>
     </SafeAreaView>
