@@ -17,6 +17,10 @@ export default function Explorepage() {
     router.push('/videoplayer')
   }
 
+  function navigate_checkout (){
+    router.push('/checkout')
+  }
+
   return (
     <SafeAreaView>
       <ScrollView contentContainerStyle={styles.main}>
@@ -35,7 +39,7 @@ export default function Explorepage() {
             <Text style={styles.nrm}>By Hadelin de Ponteves</Text>
             <Text style={styles.bld}>&#8377; 1399</Text>
             </View>
-            <TouchableOpacity style={styles.btn}><Text>Buy Now</Text></TouchableOpacity>
+            <TouchableOpacity onPress={navigate_checkout} style={styles.btn}><Text>Buy Now</Text></TouchableOpacity>
             
             <View style={styles.bxbtn}>
             <TouchableOpacity style={styles.btna}><Text>Add to cart</Text></TouchableOpacity>

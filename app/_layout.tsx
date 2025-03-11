@@ -34,6 +34,9 @@ export default function RootLayout() {
         <Stack.Screen name="explorepage" options={{ headerShown: true , title: "" , headerStyle:{backgroundColor: "white"}}} />
         <Stack.Screen name="videoplayer" options={{ headerShown: true , title: "" , headerStyle:{backgroundColor: "white"}}} />
         <Stack.Screen name="searchpage" options={{ headerShown: true , title: "" , headerStyle:{backgroundColor: "white"}}} />
+        <Stack.Screen name="all" options={{ headerShown: true , title: "" , headerStyle:{backgroundColor: "white"}}} />
+        <Stack.Screen name="checkout" options={{ headerShown: true , title: "Checkout" , headerStyle:{backgroundColor: "white"}}} />
+        <Stack.Screen name="payment" options={{ headerShown: true , title: "Payment" , headerStyle:{backgroundColor: "white"}}} />
         <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>

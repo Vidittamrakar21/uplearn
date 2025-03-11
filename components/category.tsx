@@ -1,13 +1,21 @@
 import { View, Text , ScrollView , StyleSheet} from 'react-native'
 import React from 'react'
+import { useRouter } from 'expo-router'
 
 export default function Category() {
+
+  const router = useRouter();
+
+  function navigate(){
+    router.push('/all');
+  }
+
   return (
     <View style={styles.cont}>
     <Text style={styles.txt}>Categories</Text>
     <View style={styles.main}>
       <Text style={styles.cat}>Development</Text>
-      <Text style={styles.cat}>IT & Software</Text>
+      <Text onPress={navigate} style={styles.cat}>IT & Software</Text>
       <Text style={styles.cat}>Business</Text>
       <Text style={styles.cat}>Finance & Accounting</Text>
       <Text style={styles.cat}>Office Productivity</Text>

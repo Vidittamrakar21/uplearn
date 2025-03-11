@@ -1,3 +1,4 @@
+
 import { View, Text , StyleSheet ,TextInput,SafeAreaView , ScrollView , Button, TouchableOpacity, Image  } from 'react-native'
 import React , {useState , useRef, useEffect} from 'react'
 import { AntDesign , Ionicons } from '@expo/vector-icons';
@@ -8,7 +9,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Courselist from '@/components/courselist';
 
 
-export default function Searchpage() {
+export default function all() {
 
   const video = useRef(null);
   
@@ -52,9 +53,9 @@ export default function Searchpage() {
 
     </View>: <></>}
 
-       <Category></Category>
+       {/* <Category></Category> */}
         
-      {/* <Courselist/> */}
+      <Courselist/>
 
       </ScrollView>
     </SafeAreaView>

@@ -2,14 +2,16 @@ import { View, Text ,ScrollView , Image , StyleSheet , TouchableOpacity, SafeAre
 import React from 'react'
 import { useRouter } from 'expo-router'
 
-export default function cart() {
-  const router = useRouter();
-  function navigate_checkout(){
-    router.push('/checkout')
-  }
+export default function checkout() {
+    const router = useRouter();
+
+    function navigate_payment(){
+        router.push('/payment');
+    }
   return (
     <SafeAreaView style={styles.home}>
-    <Text style={styles.txt}>My Cart</Text>
+      <Text style={styles.txt}>Summary</Text>
+
     <ScrollView   style={styles.main}>
 
 
@@ -17,7 +19,7 @@ export default function cart() {
           
           <TouchableOpacity  style={styles.btn}>
           <View style={styles.card}>
-          <Image style={styles.img}  resizeMode="stretch" source={require('../../assets/images/img12.jpg')}></Image>
+          <Image style={styles.img}  resizeMode="stretch" source={require('../assets/images/img12.jpg')}></Image>
             <View style={styles.bxa}>
             <Text style={styles.bld}>Rust Crash Course</Text>
             <Text style={styles.nrm}>⭐⭐⭐⭐ (21,503 Ratings)</Text>
@@ -35,7 +37,7 @@ export default function cart() {
           
           <TouchableOpacity style={styles.btn}>
           <View style={styles.card}>
-          <Image style={styles.img}  source={require('../../assets/images/img11.jpeg')}></Image>
+          <Image style={styles.img}  source={require('../assets/images/img11.jpeg')}></Image>
             <View style={styles.bxa}>
             <Text style={styles.bld}>Full Golang</Text>
             <Text style={styles.nrm}>⭐⭐⭐ (2,258 Ratings)</Text>
@@ -50,7 +52,7 @@ export default function cart() {
 
           <TouchableOpacity style={styles.btn}>
           <View style={styles.card}>
-         <Image style={styles.img} resizeMode="stretch" source={require('../../assets/images/img9.jpeg')}></Image>
+         <Image style={styles.img} resizeMode="stretch" source={require('../assets/images/img9.jpeg')}></Image>
             <View style={styles.bxa}>
             <Text style={styles.bld}>Javascript</Text>
             <Text style={styles.nrm}>⭐⭐⭐⭐ (81,455 Ratings)</Text>
@@ -64,12 +66,30 @@ export default function cart() {
           </TouchableOpacity>
 
 
+          <View style={styles.card2}>
+        
+        <View style={styles.bxa}>
+     
+       
+       <Text style={styles.bld}>Subtotal - &#8377; 2597</Text>
+      
+       <Text style={styles.bld}>Discount <Text style={styles.grn}>- &#8377; 300</Text></Text>
+       <Text style={styles.bld}>Amount To Pay - &#8377; 2297</Text>
+        </View>
+         
+ 
+       </View>
+          
+
+
 
 
 
     </ScrollView>
 
-    <TouchableOpacity onPress={navigate_checkout} style={styles.btn2}><Text>Buy Now</Text></TouchableOpacity>
+    
+
+    <TouchableOpacity onPress={navigate_payment} style={styles.btn2}><Text>Pay - ₹ 2597</Text></TouchableOpacity>
     
   </SafeAreaView>
   )
@@ -93,6 +113,10 @@ const styles = StyleSheet.create({
     display: "flex",
     // justifyContent: "center",
     // alignItems: "center"
+  },
+
+  grn:{
+    color:"green"
   },
 
     img:{
@@ -162,6 +186,32 @@ const styles = StyleSheet.create({
       flexDirection: "row"
     },
 
+    card2: {
+        height: 110,
+        width: "100%",
+        // borderWidth: 2,
+        // borderColor: "red",
+        display: "flex",
+        alignItems: "flex-start",
+        justifyContent: "flex-start",
+        marginTop: 10,
+        flexWrap: "wrap",
+        
+        // borderBottomLeftRadius: 20,
+        // borderBottomRightRadius: 20
+        borderRadius: 20,
+        // shadowColor: '#000',
+        // shadowOffset: { width: 0, height: 6 },
+        // shadowOpacity: 0.3,
+        // shadowRadius: 8,
+        // Shadow for Android
+        backgroundColor: "white",
+        // elevation: 6,
+        // marginLeft: 10,
+        
+        flexDirection: "column"
+      },
+
     btn: {
       height: 110,
       width: 340,
@@ -174,12 +224,14 @@ const styles = StyleSheet.create({
     },
     btn2: {
       height: 38,
-      width: "95%",
+      width: "100%",
       backgroundColor: "#FFCD38",
       borderRadius: 8,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
+      position: "absolute",
+      bottom: 10
     
     },
     bld:{
