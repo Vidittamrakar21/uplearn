@@ -14,6 +14,7 @@ This repo includes the frontend part of Uplearn which is an online learning plat
 ## Tech Stack
 
 - **Frontend**: React Native (Expo)
+- **Language**: Typescript
 - **State Management**: Redux
 
 ## Installation & Setup
